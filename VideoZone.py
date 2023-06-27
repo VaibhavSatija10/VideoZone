@@ -113,6 +113,8 @@ while True:
 
             # res = np.unique(arr)
             # print(arr)
+            # print("Enter Number of Students to mark attendance: ")
+            # x = int(input());
             if len(tempArray2)<2:
 
                 print(list2)
@@ -121,16 +123,16 @@ while True:
                 # Uncomment for api
 
                 print(list2)
-                # r = requests.post(url, json={'data' : list2})
-                # print(r.text )
-                # print(list2)
-                # r2 = requests.get(url2)
-                # geek = json.loads(r2.text)
-                # print(geek['data'])
+                r = requests.post(url, json={'data' : list2})
+                print(r.text )
+                print(list2)
+                r2 = requests.get(url2)
+                geek = json.loads(r2.text)
+                print(geek['data'])
 
 
                 # PresentData = r2.text.getProperty('id')
-
+                #
                 # print(PresentData)
                 markAttendance(name)
                 cv2.destroyAllWindow()
